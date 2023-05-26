@@ -1,8 +1,13 @@
 #ifndef OBJECT_HPP
 #define OBJECT_HPP
 
-#include <glm/glm.hpp>
-using namespace glm;
+// Renderer Header
+// Always should be included firt
+// Contains GLAD Header
+#include <Renderer.hpp>
+// Window
+#include <TransMatrices.hpp>
+#include <window.hpp>
 
 #define MAX_QOBJECT_NAME_LENGTH 64
 
@@ -18,7 +23,9 @@ struct QObject {
   float zIndex;
 };
 
-void CreateNewQObject(QObject *_object, const char* _name, float _zindex);
+
+
+void CreateNewQObject(QObject *_object, const char *_name, float _zindex);
 void RenderQObject(QObject *_object);
 
 #endif
